@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	object-fit: cover;
+	font-family: "Work Sans", sans-serif;
+}
+
+body {
+	--White: hsl(0, 0%, 100%);
+	--Light-pink: hsl(275, 100%, 97%);
+	--Grayish-purple: hsl(292, 16%, 49%);
+	--Dark-purple: hsl(292, 42%, 14%);
+	background: var(--Light-pink);
+	position: relative;
+}
+
+.bg-image {
+	width: 100%;
+}
+
+.bg-image img {
+	width: 100%;
+}
+
+.bg-image img:first-child {
+	display: block;
+}
+
+.bg-image img:last-child {
+	display: none;
+}
+
+.accordion-container {
+	width: 90%;
+	max-width: 480px;
+	margin-inline: auto;
+	background: var(--White);
+	padding: 30px 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
+	border-radius: 12px;
+}
+
+.accordion-header {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 32px;
+	padding: 10px;
+}
+
+.accordion-header h1 {
+	color: var(--Dark-purple);
+	font-size: 1.5em;
+}
+
+.accordionTitle {
+	font-size: 1em;
+	padding: 10px;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 24px;
+	color: var(--Dark-purple);
+}
+
+.accordionTitle:hover {
+	color: #AD28EB;
+}
+
+.accordionContent {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	transition: max-height 0.2s ease-out;
+	font-size: 1em;
+	color: var(--Grayish-purple);
+}
+
+@media screen and (min-width: 768px) {
+	.bg-image img:first-child {
+		display: none;
+	}
+
+	.bg-image img:last-child {
+		display: block;
+	}
+}
